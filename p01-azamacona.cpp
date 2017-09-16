@@ -7,21 +7,21 @@ using namespace std;
 int main ()
 {
 
-    srand ( (unsigned) time( NULL ) ); //random seed
-    int randomNumber, guess;
-    
-    cout<<"Guess the computer's number!"<<endl;
-    cin>>guess;
-    randomNumber = rand()%10+1
-
-if (x==y)
-{
-    cout<< "You, guessed correctly! You win!"<<endl;
+        srand ( (unsigned) time( NULL ) ); //random seed
+        int randomNumber, guess;
+        randomNumber = rand()%10+1;
+                do
+                {
+                        cout<<"Guess the computer's number!"<<endl;
+                        cin>>guess;
+                        if (randomNumber==guess)
+                        {
+                                cout<< "You, guessed correctly! You win!"<<endl;
+                        }
+                        else
+                        { 
+                                cout<< "Try again! You were off by: "<< abs(randomNumber-guess)<<endl;
+                        }
+                }while (randomNumber!=guess);
+        return 0;
 }
-else
-{ 
-    cout<< "Wrong"<<endl;
-}
-
- return 0;
- }
